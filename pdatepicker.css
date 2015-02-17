@@ -2,7 +2,7 @@
  * In the name of Allah(God)
  * 
  * @author mohammad hosain <mohammad.hosain@chmail.ir>
- * @version 0.1
+ * @version 0.2
  * @license LGPL
  */
  .pdate-picker {
@@ -18,6 +18,19 @@
 	border-style: solid;
 	border-width: 1px;
 }
+.pdate-picker .cyear{
+	max-width: 50px;
+	background-color: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	direction: ltr;
+}
+.pdate-picker .cyear:FOCUS,.pdate-picker .cyear:HOVER{
+	background-color: white;
+	border:1px solid;
+	border-radius:3px;
+}
 .pdate-picker td {
 	padding: 3px;
 	cursor: pointer;
@@ -30,24 +43,13 @@
 	font-size: 10px;
 	text-align: right;
 }
-.pdate-picker .years {
-	max-height: 180px;
-	overflow: auto;
-	position: fixed;
-	font-size: 11px;
-	background: rgb(248, 248, 248);
-	width: 70px;
-	border: 1px solid black;
-	
+.pdate-picker .cym{
+	text-align: center;
 }
-.pdate-picker .years p {
-	padding: 3px;
-	color: black;
-}
-.pdate-picker .cym span{
+.pdate-picker .cym *{
 	padding: 3px;
 }
-.pdate-picker .hidden-monthes, .pdate-picker .hidden-years,.pdate-picker-hidden {
+.pdate-picker .hidden-monthes,.pdate-picker-hidden {
 	display: none;
 }
 .pdate-picker .month-day {
@@ -70,7 +72,7 @@
 	background-color: #ff00c0;
 	color: black;
 }
-.pdate-picker .monthes-0:HOVER, .pdate-picker .years-0 p:HOVER {
+.pdate-picker .monthes-0:HOVER {
 	background: #ff00c0;
 	color: white;
 }
@@ -95,7 +97,7 @@
 	background-color: #10a32a;
 	color: black;
 }
-.pdate-picker .monthes-1:HOVER, .pdate-picker .years-1 p:HOVER {
+.pdate-picker .monthes-1:HOVER{
 	background: #10a32a;
 	color: yellow;
 }
@@ -120,7 +122,7 @@
 	background-color: #fe6f0f;
 	color: black;
 }
-.pdate-picker .monthes-2:HOVER, .pdate-picker .years-2 p:HOVER {
+.pdate-picker .monthes-2:HOVER {
 	background: #fe6f0f;
 	color: yellow;
 }
@@ -145,7 +147,7 @@
 	background-color: #1b9bf3;
 	color: black;
 }
-.pdate-picker .monthes-3:HOVER, .pdate-picker .years-3 p:HOVER {
+.pdate-picker .monthes-3:HOVER {
 	background: #1b9bf3;
 	color: #24f6f0;
 }
