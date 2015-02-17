@@ -14,7 +14,7 @@ To use pDatepicker :
 
 3.Add js code to create pdatepicker :
 
-	pdatepicker('pdatetxt',{inline:true,selected:'1393/11/26',yearRange:5,cyear:1393,cmonth:10});
+	pdatepicker('pdatetxt',{inline:true,selected:'1393/11/26',cyear:1393,cmonth:10});
 
 Second argument(configs) is optional.
 
@@ -24,10 +24,7 @@ Explanation of configs :
 
 2.selected : date that is selected by default. if not sets via configs, 'today' is used for selected date.
 
-3.yearRange : number of years before and after current year in years list.
-
-4.cyear and cmonth : cyear(current year) and cmonth(current month) are used together and when calendar opens, show this month of year.
-
+3.cyear and cmonth : cyear(current year) and cmonth(current month) are used together and when calendar opens, show this month of year.
 if cyear or(and) cmonth are not set via configs, 'selected' option is used for current year and month.
 
 
