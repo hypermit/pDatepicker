@@ -6,14 +6,6 @@
  * @license LGPL
  */
 
-pdatePicker.changeYear=function(tr,year,txtbox,configs){
-	tr.html('');
-	for(y=year;y<year+12;y++){
-		td=$('<td>'+pdatePicker.num2fa(y)+'</td>');
-		td.click(function(){pdatePicker(txtbox,configs)});
-		tr.append(td);
-	}
-}
 pdatePicker.num2fa=function(num){
 	num=num.toString();
 	fa=['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
