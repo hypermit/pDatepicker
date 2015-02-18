@@ -8,7 +8,7 @@
  .pdate-picker {
 	padding : 4px;
 	direction: rtl;
-	font-size: 13px;
+	font-size: 12px;
 	text-align: center;
 	border-radius: 3px;
 	-webkit-background-size: 100% 100%;
@@ -18,18 +18,20 @@
 	border-style: solid;
 	border-width: 1px;
 }
-.pdate-picker .cyear{
-	max-width: 50px;
+.pdate-picker .cym input{
+	max-width: 30px;
+	width: 30px;
 	background-color: transparent;
 	border: none;
 	margin: 0;
-	padding: 0;
 	direction: ltr;
 }
-.pdate-picker .cyear:FOCUS,.pdate-picker .cyear:HOVER{
+.pdate-picker .cym input:HOVER,.pdate-picker .cym input:FOCUS{
 	background-color: white;
-	border:1px solid;
-	border-radius:3px;
+	border:black solid 1px;
+	border-right:none;
+	border-bottom-left-radius:3px;
+	border-top-left-radius:3px;
 }
 .pdate-picker td {
 	padding: 3px;
@@ -45,6 +47,7 @@
 }
 .pdate-picker .cym{
 	text-align: center;
+	font-size: 10px;
 }
 .pdate-picker .cym *{
 	padding: 3px;
@@ -54,6 +57,22 @@
 }
 .pdate-picker .month-day {
 	border: 1px black solid;
+}
+.pdate-picker .cym button{
+	visibility:hidden;
+	background: transparent;
+	margin: 0px;
+	border:none;
+	cursor: default;
+}
+.pdate-picker .cym .ybtn{
+	visibility: visible;
+	border:black solid 1px;
+	border-left:none;
+	border-bottom-right-radius:3px;
+	border-top-right-radius:3px;
+	cursor: pointer;
+	padding: 2px;
 }
 /************************************/
 .pdate-picker-0{
