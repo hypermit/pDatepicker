@@ -2,13 +2,13 @@
  * In the name of Allah(God)
  * 
  * @author mohammad hosain <mohammad.hosain@chmail.ir>
- * @version 0.2
+ * @version 0.3
  * @license LGPL
  */
  .pdate-picker {
 	padding : 4px;
 	direction: rtl;
-	font-size: 14px;
+	font-size: 13px;
 	text-align: center;
 	border-radius: 3px;
 	-webkit-background-size: 100% 100%;
@@ -74,6 +74,14 @@
 	border-top-right-radius:3px;
 	cursor: pointer;
 	padding: 2px;
+}
+.pdate-picker .cym .nm-month{
+	float: right;
+	font-size: 18px;
+}
+.pdate-picker .cym .bm-month{
+	float: left;
+	font-size: 18px;
 }
 /************************************/
 .pdate-picker-0{
