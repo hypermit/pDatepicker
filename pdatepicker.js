@@ -202,7 +202,7 @@ function pdatePicker(txtbox,configs){
 		return td;
 	}
 	this.nmTd=function(tr){
-		td=$("<td>&lt;-</td>");
+		td=$("<td>&#8594;</td>");
 		month=(this.cmonth+1)%12;
 		year=this.cyear;
 		if(month == 0){
@@ -219,7 +219,7 @@ function pdatePicker(txtbox,configs){
 		tr.append(td);
 	}
 	this.bmTd=function(tr){
-		td=$("<td>-&gt;</td>");
+		td=$("<td>&#8592;</td>");
 		month=(this.cmonth-1)%12;
 		year=this.cyear;
 		if(month == 0){
@@ -290,13 +290,11 @@ function pdatePicker(txtbox,configs){
 		td.attr('colspan',5);
 		td.addClass('cym');
 		mspan=$("<span>"+pdatePicker.monthName(this.cmonth)+"</span>");
-		id=this.id();
+		var id=this.id();
 		mspan.click(function(){$("#"+id+" .monthes").toggleClass("hidden-monthes");});
 		yinput=$("<input>");
+		yinput.attr('type','text');
 		yinput.val(pdatePicker.num2fa(this.cyear));
-		yinput.addClass('cyear');
-		yinput.attr('title','.سال مورد نظر را وارد کرده و دکمه اینتر را بزنید');
-		yinput.attr('size',yinput.val().length);
 		var configs=$.extend(true, {}, this.configs);
 		configs.cmonth=this.cmonth;
 		var txtbox=this.txtbox;
@@ -305,7 +303,6 @@ function pdatePicker(txtbox,configs){
 			else if (e) k = e.which;
 			char = String.fromCharCode(k);
 			if(k==0 || k==8 || (k==13 && $(this).val()=='')){
-				$(this).attr('size',$(this).val().length);
 				return true;
 			}
 			if(k==13){
@@ -316,14 +313,37 @@ function pdatePicker(txtbox,configs){
 				char=pdatePicker.num2fa(char);
 				$(this).val($(this).val()+char);
 			}
-			$(this).attr('size',$(this).val().length);
 			return false;
 		});
 		yinput.on('focusout',function(){
 			configs.cyear=$(this).val();
 			pdatePicker(txtbox,configs);
 		});
+		ybtn=$('<button>&#10004;</button>');
+		ybtn.click(function(){
+			configs.cyear=$('.cym input').val();
+			pdatePicker(txtbox,configs);
+		});
+		yinput.on('focus',function(){
+			$(this).parent().children('button').addClass('ybtn');
+			
+		});
+		yinput.on('mouseenter',function(){
+			$(this).parent().children('button').addClass('ybtn');
+			
+		});
+		yinput.on('focusout',function(){
+			$(this).parent().children('button').removeClass('ybtn');
+			
+		});
+		yinput.on('mouseleave',function(){
+			if(!$(this).is(':focus')){
+				$(this).parent().children('button').removeClass('ybtn');
+			}
+			
+		});
 		td.append(mspan);
+		td.append(ybtn);
 		td.append(yinput);
 		tr.append(td);
 	}
