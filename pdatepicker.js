@@ -201,8 +201,8 @@ function pdatePicker(txtbox,configs){
 		td.click(function(){pdatePicker(txtbox,configs);});
 		return td;
 	}
-	this.nmTd=function(tr){
-		td=$("<td>&#8594;</td>");
+	this.nmTd=function(td){
+		span=$("<span>&#8594;</span>");
 		month=(this.cmonth+1)%12;
 		year=this.cyear;
 		if(month == 0){
@@ -215,11 +215,11 @@ function pdatePicker(txtbox,configs){
 		configs.cyear=year;
 		configs.cmonth=month;
 		var txtbox=this.txtbox;
-		td.click(function(){pdatePicker(txtbox,configs)});
-		tr.append(td);
+		span.click(function(){pdatePicker(txtbox,configs)});
+		td.append(span);
 	}
-	this.bmTd=function(tr){
-		td=$("<td>&#8592;</td>");
+	this.bmTd=function(td){
+		span=$("<span>&#8592;</span>");
 		month=(this.cmonth-1)%12;
 		year=this.cyear;
 		if(month == 0){
@@ -230,8 +230,8 @@ function pdatePicker(txtbox,configs){
 		configs.cyear=year;
 		configs.cmonth=month;
 		var txtbox=this.txtbox;
-		td.click(function(){pdatePicker(txtbox,configs)});
-		tr.append(td);
+		span.click(function(){pdatePicker(txtbox,configs)});
+		td.append(span);
 	}
 	this.hTd=function(tr){
 		td=$("<td></td>");
@@ -287,7 +287,7 @@ function pdatePicker(txtbox,configs){
 	}
 	this.ymTd=function(tr){
 		td=$("<td></td>");
-		td.attr('colspan',5);
+		td.attr('colspan',7);
 		td.addClass('cym');
 		mspan=$("<span>"+pdatePicker.monthName(this.cmonth)+"</span>");
 		var id=this.id();
@@ -342,9 +342,11 @@ function pdatePicker(txtbox,configs){
 			}
 			
 		});
+		this.nmTd(td);
 		td.append(mspan);
 		td.append(ybtn);
 		td.append(yinput);
+		this.bmTd(td);
 		tr.append(td);
 	}
 	this.draw=function(){
@@ -357,9 +359,9 @@ function pdatePicker(txtbox,configs){
 		$('#'+this.txtbox).after(tbl);
 		tr=$("<tr></tr>");
 		tr.addClass('htr-'+parseInt((this.cmonth-1)/3));
-		this.nmTd(tr);
+		
 		this.ymTd(tr);
-		this.bmTd(tr);
+		
 		tbl.append(tr);
 		this.lmTr(tbl);
 		tr=$("<tr></tr>");
