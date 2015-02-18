@@ -2,7 +2,7 @@
  * In the name of Allah(God)
  * 
  * @author mohammad hosain <mohammad.hosain@chmail.ir>
- * @version 0.2
+ * @version 0.3
  * @license LGPL
  */
 
@@ -203,6 +203,7 @@ function pdatePicker(txtbox,configs){
 	}
 	this.nmTd=function(td){
 		span=$("<span>&#8594;</span>");
+		span.addClass('nm-month');
 		month=(this.cmonth+1)%12;
 		year=this.cyear;
 		if(month == 0){
@@ -220,6 +221,7 @@ function pdatePicker(txtbox,configs){
 	}
 	this.bmTd=function(td){
 		span=$("<span>&#8592;</span>");
+		span.addClass('bm-month');
 		month=(this.cmonth-1)%12;
 		year=this.cyear;
 		if(month == 0){
