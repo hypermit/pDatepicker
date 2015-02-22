@@ -419,7 +419,9 @@ function pdatePicker(txtbox,configs){
 			$("#"+this.txtbox).css('display','none');
 		}
 		else{
-			$("#"+this.txtbox).click(function(){'$("#'+this.id()+'").toggleClass("pdate-picker-hidden");'});
+			var picker=this.picker();
+			picker.addClass("pdate-picker-hidden");
+			$("#"+this.txtbox).click(function(){picker.toggleClass("pdate-picker-hidden");});
 		}
 		$("#"+this.txtbox).val(this.syear+"/"+this.smonth+"/"+this.sday);
 	}
