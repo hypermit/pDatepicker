@@ -425,6 +425,15 @@ function pdatePicker(txtbox,configs){
 		}
 		$("#"+this.txtbox).val(this.syear+"/"+this.smonth+"/"+this.sday);
 	}
+	this.show=function(){
+		this.picker().removeClass("pdate-picker-hidden");
+	}
+	this.hide=function(){
+		this.picker().addClass("pdate-picker-hidden");
+	}
+	this.toggle=function(){
+		this.picker().toggleClass("pdate-picker-hidden");
+	}
 	this.init(txtbox,configs);
 	this.draw();
 }
