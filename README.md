@@ -29,11 +29,10 @@ if cyear or(and) cmonth are not set via configs, 'selected' option is used for c
 
 
 To show,hide and toggle picker use show,hide and toggle function :
-```
-<script>
-pdp=new pdatePicker();
-</script>
-<button onclick='pdp.show();'>show pdate picker</button>
+
+
+	<script>pdp=new pdatePicker();</script><button onclick='pdp.show();'>show pdate picker</button>
+
 
 ###Email
 mohammad.hosain@chmail.ir
