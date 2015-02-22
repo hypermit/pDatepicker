@@ -17,10 +17,12 @@
     background-size: 100% 100%;
 	border-style: solid;
 	border-width: 1px;
+	border-spacing: 3px !important;
+	border-collapse: separate !important;
 }
 .pdate-picker .cym input{
-	max-width: 30px;
-	width: 30px;
+	max-width: 33px;
+	width: 33px;
 	background-color: transparent;
 	border: none;
 	margin: 0;
