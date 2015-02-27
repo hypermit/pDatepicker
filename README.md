@@ -22,10 +22,10 @@ Explanation of configs :
 
 1.inline : if true textbox is not shown.
 
-2.selected : date that is selected by default. if not sets via configs, 'today' is used for selected date.
+2.selected : date that is selected by default. if does not set via configs, 'today' is used for selected date.
 
 3.cyear and cmonth : cyear(current year) and cmonth(current month) are used together and when calendar opens, show this month of year.
-if cyear or(and) cmonth are not set via configs, 'selected' option is used for current year and month.
+if cyear or(and) cmonth do not set via configs, 'selected' option is used for current year and month.
 
 
 To show,hide and toggle picker use show,hide and toggle function :
