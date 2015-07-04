@@ -1,0 +1,14 @@
+{
+    "name": "mohammadhosain/pDatepicker",
+    "description": "persian date picker",
+    "keywords": [
+        "persian", "date picker"
+    ],
+    "authors": [
+        {
+            "name": "Mohammad Hosain",
+            "email": "mohammad.hosain@chmail.ir"
+        }
+    ],
+    "license": "LGPL"
+}
