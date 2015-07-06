@@ -27,7 +27,7 @@ Explanation of configs :
 3.cyear and cmonth : cyear(current year) and cmonth(current month) are used together and when calendar opens, show this month of year.
 if cyear or(and) cmonth do not set via configs, 'selected' option is used for current year and month.
 
-4.readonly : if `true`, picker obly shows date and user can not change it.
+4.readonly : if `true`, picker only shows date and user can not change it.
 
 
 To show,hide and toggle picker use show,hide and toggle function :
