@@ -6,7 +6,8 @@
  * @license LGPL
  */
 .pdate-picker {
-
+    width: auto !important;
+    font-family: sans-serif !important;
     z-index: 9999;
     padding : 4px;
     direction: rtl;
@@ -29,6 +30,8 @@
     border: none;
     margin: 0;
     direction: rtl;
+    font-size: 13px !important;
+    height:auto !important; 
 }
 .pdate-picker .cym input:HOVER,.pdate-picker .cym input:FOCUS{
     background-color: white;
