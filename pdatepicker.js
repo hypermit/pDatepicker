@@ -322,6 +322,9 @@ function pDatepicker(txtboxId, configs) {
         if (this.selected !== null) {
             $("#" + this.txtboxId).val(this.syear + "/" + this.smonth + "/" + this.sday);
         }
+        else{
+            $("#" + this.txtboxId).val('');
+        }
     };
     this.createMTd = function (day) {
         td = $("<td>" + pDatepicker.num2fa(day) + "</td>");
