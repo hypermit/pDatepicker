@@ -316,7 +316,7 @@ function pDatepicker(txtboxId, configs) {
             tbl.addClass("pdate-picker-hidden");
             var id = this.id();
             $("#" + this.txtboxId).click(function () {
-                $("#" + id).toggleClass("pdate-picker-hidden");
+                $("#" + id).removeClass("pdate-picker-hidden");
             });
         }
         if (this.selected !== null) {
